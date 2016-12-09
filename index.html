@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palette - A simple colour contrast analyser. Made by Often.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="style.min.css" rel="stylesheet">
+    <link href="media.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fontlibrary.org/face/hk-grotesk"/>
+    <link href="./analyser/styles.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="info">
+      <img class="icon" src="./logo.png" />
+      <div>
+        <div class="info-text">
+          <h1>Palette</h1>
+          <p>Easily analyse RGB, #HEX or CSS colours from your Mac's menu bar.</p>
+        </div>
+        <a class="button" target="_blank" href="https://gum.co/palette">Free download</a>
+        <div class="made-by">
+          <h4>Made by</h4>
+          <img src="./OFTEN.png" />
+        </div>
+        <span class="electron">Made with <a href="http://electron.atom.io/">Electron</a></span>
+      </div>
+    </div>
+    <div class="analyser">
+      <div onload="changeForeground(); changeBackground();">
+        <div class="center">
+          <output tabindex="0">
+          	<strong>?</strong>
+          	<span class="error"></span>
+          </output>
+          <section id="results"></section>
+        </div>
+        <section class="box">
+          <label>Foreground</label>
+          <input id="foreground" value="#222" autofocus onclick="changeForeground();" onkeyup="changeForeground();" />
+          <span id="foregroundDot"></span>
+        </section>
+        <section class="box">
+          <label>Background</label>
+          <input id="background" value="#44FFF5" autofocus onclick="changeBackground();" onkeyup="changeBackground();" />
+          <span id="backgroundDot"></span>
+        </section>
+        <section class="color-display" id="backgroundDisplay"></section>
+        <section class="color-display" id="foregroundDisplay"><button id="swap">Swap colors</button></section>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://leaverou.github.com/incrementable/incrementable.js" id="incrementable" async></script>
+  <script src="./analyser/color.js"></script>
+  <script src="./analyser/contrast-ratio.js"></script>
+
+
+</html>

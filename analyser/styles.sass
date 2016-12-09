@@ -1,0 +1,113 @@
+$primary-font:    'HKGroteskBold', Helvetica, sans-serif
+$primary-color: #222
+$secondary-color: #44FFF5
+$tertiary-color: #FFFFFF
+
+*
+  font: 14px sans-serif
+  -webkit-appearance: none
+  -moz-appearance: none
+  outline: none
+  font-family: $primary-font
+
+#closeBtn
+  text-align: right
+  position: absolute
+  height: 20px
+  width: 20px
+  right: 20px
+  cursor: pointer
+
+.box
+  margin: 0 0 15px 0
+  width: 200px
+  border: 1px solid $primary-color
+  padding: 15px
+  display: flex
+  border-radius: 5px
+  justify-content: space-between
+
+
+  input
+    width: 75px
+    border: none
+    outline: none
+    background: none
+    margin-left: 20px
+    color: $primary-color
+    text-transform: uppercase
+    font-weight: 700
+    text-align: right
+
+  label
+    text-transform: uppercase
+    width: 130px
+    font-size: 12px
+    margin-top: 3px
+    color: $primary-color
+    text-transform: uppercase
+
+  span
+    width: 16px
+    height: 16px
+    min-width: 16px
+    min-height: 16px
+    border-radius: 50%
+    margin-left: 10px
+    border: 1px solid $primary-color
+
+#foregroundDot
+  background: $primary-color
+
+#backgroundDot
+  background: $secondary-color
+
+.color-display
+  width: 232px
+  border-radius: 50px
+
+output
+  min-width: 230px
+  width: 230px
+  margin-top: 10px
+  display: flex
+  border-radius: 5px
+  justify-content: center
+  align-items: center
+  background: #fff !important
+
+  strong
+    font-size: 40px
+    font-weight: 700
+
+#results
+  padding: 20px
+  text-align: center
+  color: #222
+  height: 60px
+  overflow: hidden
+  @extend .center
+
+button
+  background: none
+  padding: 15px
+  width: 232px
+  font-weight: 700
+  border: none
+  text-transform: uppercase
+  color: $primary-color
+  background: $secondary-color
+  border-radius: 5px
+  border: 1px solid #eee
+  text-decoration: none
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: 700
+
+.center
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  width: 230px
